@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>STREET | BLOCK</title>
+    <style>
+      body {
+        background-color: #333;
+      }
+      .street {
+        margin-top: 150px;
+        width: 1000px;
+      }
+      .house {
+        display: inline-block;
+        width: 150px;
+        margin-right: 30px;
+      }
+      .house-roof {
+        width: 0px;
+        height: 0px;
+        border: 76px solid brown;
+        border-top-width: 0px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-width: 80px;
+      }
+      .house-wall {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(228, 208, 184);
+        border: 1px solid rgb(161, 96, 12);
+      }
+      .house-window {
+        width: 50px;
+        height: 50px;
+        border: 5px solid brown;
+        transform: translateX(45px) translateY(45px);
+      }
+      .house-window div {
+        display: inline-block;
+
+        width: 24px;
+        height: 24px;
+        background-color: rgb(242, 242, 186);
+      }
+      .house-window div:nth-child(1) {
+        border-right: 1px solid brown;
+        border-bottom: 1px solid brown;
+        margin-right: -4px;
+        margin-bottom: -4px;
+      }
+      .house-window div:nth-child(2) {
+        border-left: 1px solid brown;
+        border-bottom: 1px solid brown;
+        margin-bottom: -4px;
+      }
+      .house-window div:nth-child(3) {
+        border-top: 1px solid brown;
+        border-right: 1px solid brown;
+        margin-right: -4px;
+      }
+      .house-window div:nth-child(4) {
+        border-top: 1px solid brown;
+        border-left: 1px solid brown;
+      }
+
+      .tall-building {
+        display: inline-block;
+        width: 150px;
+        height: 497px;
+        background-color: #454040;
+        border: 1px solid rgb(8, 47, 99);
+        vertical-align: bottom;
+      }
+      .tb-windows-left {
+        display: inline-block;
+        width: 60px;
+        height: 495px;
+        border: 1px solid rgb(8, 47, 99);
+        vertical-align: top;
+      }
+      .tb-windows-right {
+        display: inline-block;
+        width: 60px;
+        height: 495px;
+        border: 1px solid rgb(8, 47, 99);
+        vertical-align: top;
+        margin-right: -4px;
+      }
+      .tb-windows-left div {
+        display: inline-block;
+        width: 16px;
+        height: 28px;
+        margin-bottom: -3px;
+        border: 1px solid rgb(8, 47, 99);
+        background-color: rgb(220, 233, 100);
+        transform: translateX(10px);
+      }
+      .tb-windows-left div:nth-child(3) {
+        background-color: darkgrey;
+      }
+      .tb-windows-left div:nth-child(8) {
+        background-color: darkgrey;
+      }
+      .tb-windows-left div:nth-child(17) {
+        background-color: darkgrey;
+      }
+      .tb-windows-left div:nth-child(14) {
+        background-color: darkgrey;
+      }
+      .tb-windows-left div:nth-child(21) {
+        background-color: darkgrey;
+      }
+      .tb-windows-left div:nth-child(24) {
+        background-color: darkgrey;
+      }
+      .tb-windows-right div {
+        display: inline-block;
+        width: 16px;
+        height: 28px;
+        margin-bottom: -3px;
+        border: 1px solid rgb(8, 47, 99);
+        background-color: rgb(220, 233, 100);
+        transform: translateX(10px);
+      }
+      .tb-windows-right div:nth-child(5) {
+        background-color: darkgrey;
+      }
+      .tb-windows-right div:nth-child(10) {
+        background-color: darkgrey;
+      }
+
+      .tb-windows-right div:nth-child(11) {
+        background-color: darkgrey;
+      }
+
+      .tb-windows-right div:nth-child(16) {
+        background-color: darkgrey;
+      }
+
+      .tb-windows-right div:nth-child(18) {
+        background-color: darkgrey;
+      }
+
+      .tb-windows-right div:nth-child(21) {
+        background-color: darkgrey;
+      }
+      .tb-windows-right div:nth-child(27) {
+        background-color: darkgrey;
+      }
+
+      .lift {
+        display: inline-block;
+        width: 18px;
+        height: 495px;
+        border: 1px solid rgb(8, 47, 99);
+        background-color: rgb(172, 191, 208);
+      }
+      .lift div {
+        width: 16px;
+        height: 28px;
+        background-color: rgb(100, 186, 233);
+        border: 1px solid rgb(8, 47, 99);
+        margin-bottom: 1px;
+      }
+      .lift div:nth-child(6) {
+        background-color: rgb(54, 104, 131);
+      }
+      #lift-people {
+        margin-top: 12px;
+      }
+
+      .lift div :last-child {
+        margin-bottom: 0px;
+      }
+
+      .bench {
+        display: inline-block;
+        transform: translateY(50px);
+      }
+      .tree {
+        display: inline-block;
+        transform: translateX(-45px);
+      }
+      .fountain {
+        display: inline-block;
+        transform: translateY(65px) translateX(-80px);
+      }
+      .big-cloud {
+        display: inline-block;
+        transform: translateY(-300px) translateX(-230px);
+      }
+      .small-cloud {
+        display: inline-block;
+        transform: translateY(-270px) translateX(-250px);
+      }
+      .antenna {
+        display: inline-block;
+        transform: translateX(-120px) translateY(-102px);
+      }
+
+      .small-building {
+        display: inline-block;
+        width: 150px;
+        height: 200px;
+        background-color: #966a6a;
+        border: 1px solid brown;
+        vertical-align: bottom;
+        transform: translateX(-250px);
+      }
+
+      .small-building div {
+        width: 10px;
+        height: 15px;
+        border: 1px solid brown;
+        background-color: #fff;
+        transform: translateX(-13px);
+        margin-bottom: 20px;
+      }
+      .small-building div:first-child {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="street">
+      <div class="house">
+        <div class="house-roof"></div>
+        <div class="house-wall">
+          <div class="house-window">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tall-building">
+        <div class="tb-windows-left">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="lift">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div>
+            <img
+              id="lift-people"
+              src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-11/16/Users-icon.png"
+              alt=""
+            />
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="tb-windows-right">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="bench">
+        <img
+          src="https://icons.iconarchive.com/icons/artdesigner/urban-stories/96/Bench-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="tree">
+        <img
+          src="https://icons.iconarchive.com/icons/iconarchive/essential-buildings/96/Nature-Tree-City-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="fountain">
+        <img
+          src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-3d/72/Fountain-3d-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="big-cloud">
+        <img
+          src="https://icons.iconarchive.com/icons/robinweatherall/seasonal/96/cloud-dark-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="small-cloud">
+        <img
+          src="https://icons.iconarchive.com/icons/robinweatherall/seasonal/72/cloud-dark-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="antenna">
+        <img
+          src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-flat/48/Satellite-Antenna-Flat-icon.png"
+          alt=""
+        />
+      </div>
+      <div class="small-building">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
