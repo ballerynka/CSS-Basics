@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>3D-GALLERY</title>
+    <style>
+      body {
+        background-color: rgb(167, 160, 143);
+        perspective: 1000px;
+      }
+      #gallery {
+        width: 500px;
+        height: 500px;
+        border: 5px solid rgb(249, 223, 157);
+        margin: auto;
+        margin-top: 100px;
+        transform: rotateX(0deg);
+        animation: photo 60s linear;
+      }
+      @keyframes photo {
+        from {
+          transform: rotateX(50deg);
+        }
+        to {
+          transform: rotateX(2000deg);
+        }
+    }
+      #gallery div:nth-child(1) {
+        display: inline-block;
+        width: 198px;
+        height: 198px;
+        border: 1px solid rgb(249, 223, 157);
+        background-image: url(https://www.gladwinsfarm.co.uk/wp-content/uploads/2019/10/gladwins-farm-new-years-eve.png);
+        background-position: -302px 0;
+      }
+      #gallery div:nth-child(2) {
+        display: inline-block;
+        width: 294px;
+        height: 198px;
+        border: 1px solid rgb(249, 223, 157);
+        background-image: url(https://www.gladwinsfarm.co.uk/wp-content/uploads/2019/10/gladwins-farm-new-years-eve.png);
+        background-position: -506px 0;
+      }
+      #gallery div:nth-child(3) {
+        display: inline-block;
+        width: 144px;
+        height: 144px;
+        border: 1px solid rgb(249, 223, 157);
+        background-image: url(https://www.gladwinsfarm.co.uk/wp-content/uploads/2019/10/gladwins-farm-new-years-eve.png);
+        background-position-y: -203px;
+        background-position-x: -302px;
+      }
+      #gallery div:nth-child(4) {
+        display: inline-block;
+        width: 348px;
+        height: 294px;
+        border: 1px solid rgb(249, 223, 157);
+        vertical-align: top;
+        background-image: url(https://www.gladwinsfarm.co.uk/wp-content/uploads/2019/10/gladwins-farm-new-years-eve.png);
+        background-position-x: -452px;
+        background-position-y: -203px;
+      }
+      #gallery div:nth-child(5) {
+        display: block;
+        width: 144px;
+        height: 144px;
+        border: 1px solid rgb(249, 223, 157);
+        background-image: url(https://www.gladwinsfarm.co.uk/wp-content/uploads/2019/10/gladwins-farm-new-years-eve.png);
+        background-position-y: -346px;
+        background-position-x: -302px;
+        transform: translateY(-146px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gallery">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
