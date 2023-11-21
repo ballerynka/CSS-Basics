@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Cinema</title>
+    <style>
+      body {
+        background-color: #555;
+        color: yellow;
+      }
+      h2 {
+        color: white;
+      }
+      .cinema {
+        border: 1px solid red;
+        width: 1000px;
+        text-align: center;
+        margin: auto;
+      }
+      .cinema span {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+      }
+      .cinema .vip span {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Sphere-Seat-icon.png);
+        vertical-align: text-bottom;
+      }
+
+      .cinema .vip span:last-child::after {
+        display: block;
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Male-icon.png);
+      }
+      .cinema .vip span:nth-child(3)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Male-icon.png);
+        display: block;
+      }
+      .cinema .vip span:nth-child(4)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Female-icon.png);
+        display: block;
+      }
+      .cinema .main span {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+        vertical-align: top;
+      }
+
+      .cinema .main span:nth-child(4) {
+        margin-right: 36px;
+      }
+
+      .cinema .main span:nth-child(5) {
+        margin-left: 36px;
+      }
+      .cinema .main .row:first-of-type span:nth-child(3)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Female-icon.png);
+        display: block;
+      }
+      .cinema .main .row:nth-of-type(2) span:first-child::after {
+        content: url(https://icons.iconarchive.com/icons/icons-land/vista-love/48/Sex-Unknown-icon.png);
+        display: block;
+      }
+      .cinema .main .row:nth-of-type(2) span:nth-child(6)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Female-icon.png);
+        display: block;
+      }
+      .cinema .main .row:nth-of-type(3) span:nth-child(2)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Male-icon.png);
+        display: block;
+      }
+
+      .cinema .front span {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+        vertical-align: top;
+      }
+      .cinema .front .row:first-of-type span:nth-child(3)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Female-icon.png);
+        display: block;
+      }
+      .cinema .front .row:last-of-type span:nth-child(4)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Male-icon.png);
+        display: block;
+      }
+      .cinema .front .row:last-of-type span:nth-child(5)::after {
+        content: url(https://icons.iconarchive.com/icons/custom-icon-design/flatastic-7/32/Female-icon.png);
+        display: block;
+      }
+      ::after {
+        transform: translateY(-20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cinema">
+      <div class="vip">
+        <h2>VIP</h2>
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span
+          ><span>6</span><span>7</span>
+        </div>
+      </div>
+
+      <div class="main">
+        <h2>Main</h2>
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span
+          ><span>6</span><span>7</span><span>8</span>
+        </div>
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span
+          ><span>6</span><span>7</span><span>8</span>
+        </div>
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span
+          ><span>6</span><span>7</span><span>8</span>
+        </div>
+      </div>
+
+      <div class="front">
+        <h2>Front</h2>
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+        <div class="row">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
