@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DROPDOWN MENU | Pure CSS</title>
+    <style>
+      body {
+        background-color: #333;
+      }
+      .dropdown {
+        margin: 100px;
+        width: 130px;
+        height: 30px;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        background-color: rgb(221, 83, 68);
+        color: white;
+        font-family: arial;
+        box-shadow: 0 0 3px black;
+      }
+      .dropdown .list {
+        display: none;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        margin-top: 14px;
+        transform: translateX(-18px);
+      }
+      .dropdown label {
+        user-select: none;
+      }
+      .dropdown input {
+        display: none;
+      }
+      .dropdown input:checked + label + .list {
+        display: block;
+      }
+      .dropdown label div {
+        display: inline-block;
+        transform: translateY(4px);
+      }
+
+      .dropdown label::after {
+        content: "▽";
+      }
+      .dropdown input:checked + label::after {
+        content: "△";
+      }
+      .dropdown ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        height: 100%;
+      }
+      .dropdown ul li div {
+        display: inline-block;
+        transform: translateX(25px) translateY(7px);
+      }
+
+      .dropdown ul li {
+        width: 164px;
+        height: 39px;
+        border: 1px solid transparent;
+        background-color: rgb(226, 143, 133);
+        box-shadow: 0 0 4px black;
+      }
+      .dropdown ul li:first-child {
+        border-top: 0;
+      }
+      .dropdown ul li:first-child:hover {
+        background-color: rgb(201, 94, 82);
+      }
+      .dropdown ul li:nth-child(2) {
+        border-top: 0;
+      }
+      .dropdown ul li:nth-child(2):hover {
+        background-color: rgb(201, 94, 82);
+      }
+
+      .dropdown ul li:last-child {
+        border-top: 0;
+      }
+      .dropdown ul li:last-child:hover {
+        background-color: rgb(201, 94, 82);
+      }
+      ::after {
+        display: inline-block;
+        margin-left: 36px;
+        transform: translateY(6px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="dropdown">
+      <input type="checkbox" id="toggler" />
+      <label for="toggler"><div>Dropdown</div></label>
+
+      <ul class="list">
+        <li>
+          <a href=""><div>Item 1</div></a>
+        </li>
+        <li>
+          <a href=""><div>Item 2</div></a>
+        </li>
+        <li>
+          <a href=""><div>Item 3</div></a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
