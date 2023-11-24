@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>PAYMENT FORM</title>
+
+    <style>
+      body {
+        background-color: black;
+        margin-top: 320px;
+      }
+      .container {
+        display: inline-block;
+        background-color: rgb(104, 163, 221);
+        width: 100%;
+        height: 590px;
+        background-image: linear-gradient(to right, #4db8ff, #3377ff);
+      }
+      #payment-form {
+        margin: auto;
+        margin-top: 50px;
+        padding: 0 20px 20px 20px;
+        background-color: #fff;
+        width: 650px;
+        height: 480px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: rgb(98, 97, 97);
+      }
+      #payment-form .payment-title {
+        text-align: center;
+      }
+      #payment-form .payment-title span {
+        font-size: 14px;
+      }
+      #payment-form .fieldset-box {
+        display: inline-block;
+        width: 550px;
+        height: 65px;
+        vertical-align: top;
+      }
+
+      #payment-form .fieldset-box .image {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        background-image: url(https://icons.iconarchive.com/icons/designbolts/credit-card-payment/48/Master-Card-icon.png);
+        background-repeat: no-repeat;
+        transform: translateY(16px);
+      }
+      #payment-form .fieldset-box2 .image {
+        background-image: url(https://icons.iconarchive.com/icons/designbolts/credit-card-payment/48/Visa-icon.png);
+      }
+      #payment-form .fieldset-box3 {
+        display: inline-block;
+        width: 356px;
+        height: 65px;
+        vertical-align: top;
+      }
+      #payment-form .fieldset-box4 {
+        display: inline-block;
+        width: 156px;
+        height: 65px;
+        vertical-align: top;
+        margin-left: 16px;
+      }
+      #payment-form .fieldset-box5 {
+        display: inline-block;
+        width: 96px;
+        height: 65px;
+        vertical-align: top;
+        float: right;
+      }
+      #payment-form .card-number {
+        display: inline-block;
+        width: 468px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 0 0 8px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #payment-form .card-number input {
+        width: 462px;
+        height: 34px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #payment-form .cardholder {
+        width: 638px;
+        height: 50px;
+        margin-left: 0;
+      }
+      #payment-form .cardholder input {
+        width: 630px;
+      }
+      #payment-form .card-number-new {
+        margin-left: 0;
+        width: 344px;
+        height: 50px;
+      }
+      #payment-form .card-number-new input {
+        width: 338px;
+      }
+      #payment-form .expire {
+        width: 140px;
+        height: 42px;
+        margin: 0;
+        transform: translateY(8px);
+      }
+      /* #payment-form .expire:hover,
+      .expire input:hover,
+      .cvv:hover,
+      .cvv input:hover,
+      .card-number:hover,
+      .card-number input:hover {
+        background-color: #e6faff;
+      } */
+      #payment-form .expire input {
+        width: 140px;
+        height: 40px;
+        border-radius: 5px;
+      }
+      #payment-form .cvv {
+        width: 80px;
+        height: 42px;
+        margin: 0;
+
+        transform: translateY(8px);
+      }
+      #payment-form .cvv input {
+        width: 80px;
+        height: 40px;
+      }
+      #payment-form .cvv::after {
+        display: inline-block;
+        content: url(https://icons.iconarchive.com/icons/pictogrammers/material/16/lock-reset-icon.png);
+      }
+      ::after {
+        transform: translateX(64px) translateY(-28px);
+      }
+
+      #payment-form input[type="number"]::-webkit-inner-spin-button,
+      #payment-form input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+      #payment-form input:focus::placeholder {
+        color: transparent;
+      }
+
+      /* #payment-form input[type="submit"] {
+        display: block;
+        width: 650px;
+        height: 42px;
+        border-radius: 5px;
+        background-color: rgb(46, 176, 46);
+        color: white;
+      }
+      #payment-form input[type="submit"]:hover {
+        background-color: rgb(9, 117, 9);
+      }*/
+      .remove-btn1,
+      .remove-btn2 {
+        display: inline-block;
+        width: 96px;
+        height: 60px;
+        cursor: pointer;
+        vertical-align: bottom;
+      }
+      .checkbox1,
+      .checkbox2 {
+        display: none;
+      }
+      .text {
+        color: #3377ff;
+        cursor: pointer;
+        transform: translateY(28px) translateX(10px);
+      }
+      .text:hover {
+        color: blue;
+      }
+      .add-card-btn {
+        display: inline-block;
+        width: 650px;
+        padding: 15px 0 15px 0;
+        border-radius: 5px;
+        background-color: rgb(46, 176, 46);
+        color: white;
+        text-align: center;
+      }
+      .add-card-btn:hover {
+        background-color: rgb(9, 117, 9);
+      }
+      .add-card-btn span {
+        display: none;
+      }
+      #submit {
+        display: none;
+      }
+      #submit:checked + label span {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" id="payment-form">
+        <div class="payment-title">
+          <h2>Settings<br /><span>Payment</span></h2>
+        </div>
+        <h5>Saved cards:</h5>
+
+        <div class="fieldset-box">
+          <div class="image"></div>
+          <fieldset class="card-number">
+            <legend>Card Number</legend>
+            <input type="text" value="**** **** **** 3193" />
+          </fieldset>
+        </div>
+
+        <div class="remove-btn1">
+          <input type="checkbox" class="checkbox1" id="remove-card1" />
+          <label for="remove-card1"><div class="text">Remove card</div></label>
+        </div>
+
+        <div class="fieldset-box fieldset-box2">
+          <div class="image"></div>
+          <fieldset class="card-number">
+            <legend>Card Number</legend>
+            <input type="text" value="**** **** **** 4296" />
+          </fieldset>
+        </div>
+
+        <div class="remove-btn2">
+          <input type="checkbox" class="checkbox2" id="remove-card2" />
+          <label for="remove-card2"><div class="text">Remove card</div></label>
+        </div>
+
+        <h5>Add new card:</h5>
+        <div class="fieldset-box">
+          <fieldset class="card-number cardholder">
+            <legend>Cardholder's Name</legend>
+            <input type="text" required placeholder="Anna Doe" />
+          </fieldset>
+        </div>
+        <div class="fieldset-box3">
+          <fieldset class="card-number card-number-new">
+            <legend>Card Number</legend>
+            <input type="number" required placeholder="**** **** **** ****" />
+          </fieldset>
+        </div>
+        <div class="fieldset-box4">
+          <fieldset class="card-number expire">
+            <input type="text" required placeholder="Expire" />
+          </fieldset>
+        </div>
+        <div class="fieldset-box5">
+          <fieldset class="card-number cvv">
+            <input type="number" required placeholder="Cvv" />
+          </fieldset>
+        </div>
+        <div>
+          <input type="checkbox" name="" id="submit" />
+          <label for="submit" class="add-card-btn"
+            >ADD CARD<span>...(processing)...</span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
