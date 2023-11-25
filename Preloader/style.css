@@ -1,0 +1,40 @@
+body {
+  background-color: #004d4d;
+}
+.preloader {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed white;
+  position: relative;
+}
+.preloader .lg {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #ccffff;
+  border-top-color: transparent;
+  border-radius: 100px;
+  box-sizing: border-box;
+  animation: circle 6s infinite linear;
+position: absolute
+}
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.preloader .sm {
+  width: 160px;
+  height: 160px;
+  border: 5px solid #4dffff;
+  border-right-color: transparent;
+  border-radius: 85px;
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  animation: circle 3s infinite linear;
+  animation-direction: reverse;
+}
