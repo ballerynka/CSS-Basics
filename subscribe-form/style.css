@@ -1,0 +1,70 @@
+body {
+  background-color: #555;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+
+.subscription-form {
+  background-color: #333;
+  width: 500px;
+  color: white;
+  font-family: sans-serif;
+  padding: 10px;
+}
+.subscription-form h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: darkorange;
+  text-shadow: 1px 1px black;
+}
+.subscription-form > label,
+.subscription-form > .options > div {
+  display: block;
+  padding: 5px;
+  text-shadow: 1px 1px black;
+}
+
+.subscription-form > label > input {
+  padding: 10px;
+  background-color: #ccc;
+  border: 1px solid darkgrey;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: inset 0 0 2px black;
+  cursor: pointer;
+}
+.subscription-form > label > input:focus {
+  background-color: white;
+}
+
+.subscription-form > button {
+  padding: 10px;
+  margin: 10px 0 5px 0;
+  border: 1px solid darkgrey;
+  border-radius: 2px;
+  box-shadow: inset 0 0 2px black;
+  font-weight: bolder;
+  color: #333333;
+  cursor: pointer;
+}
+.subscription-form > button:hover {
+  background-color: darkorange;
+}
+.subscription-form > .options input {
+  display: none;
+}
+.subscription-form .options span {
+  cursor: pointer;
+}
+
+.subscription-form > .options label::before {
+  content: "⬡";
+  color: #999;
+  cursor: pointer;
+}
+.subscription-form > .options input:checked + label::before {
+  content: "⬢";
+  color: darkorange;
+}
