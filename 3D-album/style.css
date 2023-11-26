@@ -1,0 +1,59 @@
+body {
+  background-color: #356;
+  margin: 0;
+}
+.carousel {
+  border: 10px solid #427e7e;
+  border-radius: 15px;
+  width: 510px;
+  height: 710px;
+  margin-top: 150px;
+  margin-left: 150px;
+  perspective: 1600px;
+}
+.carousel > div {
+  width: 500px;
+  height: 0;
+  transition: 1s;
+}
+.carousel > div > img {
+  border: 5px solid #00e6e6;
+  border-radius: 5px;
+}
+.carousel > div:nth-child(5) {
+  transform: rotateY(0deg);
+  transform-origin: left;
+}
+.carousel > div:nth-child(4) {
+  transform: rotateY(0deg);
+  transform-origin: left;
+  filter: brightness(85%);
+}
+.carousel > div:nth-child(3) {
+  transform: rotateY(0deg);
+  filter: brightness(70%);
+  transform-origin: left;
+}
+.carousel > div:nth-child(2) {
+  transform: rotateY(0deg);
+  filter: brightness(55%);
+  transform-origin: left;
+}
+.carousel > div:nth-child(1) {
+  transform: rotateY(0deg);
+  filter: brightness(40%);
+  transform-origin: left;
+}
+
+.carousel:hover > div:nth-child(5) {
+  transform: rotateY(-70deg);
+}
+.carousel:hover > div:nth-child(4) {
+  transform: rotateY(-60deg);
+}
+.carousel:hover > div:nth-child(3) {
+  transform: rotateY(-50deg);
+}
+.carousel:hover > div:nth-child(2) {
+  transform: rotateY(-40deg);
+}
