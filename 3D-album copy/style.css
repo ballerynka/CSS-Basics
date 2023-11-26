@@ -1,0 +1,67 @@
+body {
+  background-color: #356;
+  margin: 0;
+}
+.carousel {
+  width: 510px;
+  height: 710px;
+  border: 10px solid #427e7e;
+  border-radius: 15px;
+  margin-top: 150px;
+  margin-left: 150px;
+  perspective: 1600px;
+}
+.carousel img:nth-of-type(2),
+.carousel img:nth-of-type(3),
+.carousel img:nth-of-type(4),
+.carousel img:nth-of-type(5) {
+  margin-left: -509.5px;
+}
+
+.carousel > div {
+  width: 500px;
+  transition: 1s;
+}
+.carousel img {
+  border: 5px solid #00e6e6;
+  border-radius: 5px;
+  margin-right: -4.5px;
+  margin-bottom: -4.5px;
+}
+.carousel img:nth-of-type(5) {
+  transform: rotateY(0deg);
+  transform-origin: left;
+}
+.carousel img:nth-of-type(4) {
+  transform: rotateY(0deg);
+  transform-origin: left;
+  filter: brightness(90%);
+}
+.carousel img:nth-of-type(3) {
+  transform: rotateY(0deg);
+  filter: brightness(80%);
+  transform-origin: left;
+}
+.carousel img:nth-of-type(2) {
+  transform: rotateY(0deg);
+  filter: brightness(70%);
+  transform-origin: left;
+}
+.carousel img:nth-of-type(1) {
+  transform: rotateY(0deg);
+  filter: brightness(60%);
+  transform-origin: left;
+}
+
+.carousel:hover img:nth-of-type(5) {
+  transform: rotateY(-70deg);
+}
+.carousel:hover img:nth-of-type(4) {
+  transform: rotateY(-60deg);
+}
+.carousel:hover img:nth-of-type(3) {
+  transform: rotateY(-50deg);
+}
+.carousel:hover img:nth-of-type(2) {
+  transform: rotateY(-40deg);
+}
