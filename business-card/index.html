@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Business Card Example</title>
+    <style>
+      body {
+        background-color: #000000;
+        margin-top: 150px;
+        margin-left: 150px;
+      }
+      h1,
+      h2,
+      p,
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      #business-card {
+        background-color: #111;
+        width: 400px;
+        height: 200px;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: inset 6px 8px 2.5px #f2f2f2, inset -12px -12px 2.5px #f2f2f2;
+      }
+      #business-card .name {
+        display: inline-block;
+        border-right: 2px solid white;
+        text-align: right;
+        padding: 8px;
+        margin-top: 50px;
+      }
+      #business-card .info {
+        display: inline-block;
+        padding: 8px;
+        margin-top: 40px;
+        float: right;
+        margin-right: 16px;
+      }
+      #business-card .name h1 {
+        color: white;
+        font-weight: 400;
+      }
+      #business-card .name h2 {
+        color: #bfad73;
+        font-weight: 600;
+      }
+
+      #business-card .name small {
+        color: grey;
+      }
+      #business-card .info p {
+        color: #f2f2f2;
+        margin-bottom: 4px;
+      }
+      #business-card .info li {
+        color: grey;
+        font-size: small;
+        margin-bottom: 2px;
+      }
+      #business-card .info li:nth-child(1)::before {
+        content: url(https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/16/Phone-2-icon.png);
+        margin-right: 8px;
+      }
+      #business-card .info li:nth-child(2)::before {
+        content: url(https://icons.iconarchive.com/icons/graphicloads/100-flat/16/email-2-icon.png);
+        margin-right: 8px;
+      }
+      #business-card .info li:nth-child(3)::before {
+        content: url(https://icons.iconarchive.com/icons/blackvariant/button-ui-system-folders-drives/16/Sites-icon.png);
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="business-card">
+      <div class="name">
+        <h1>Firstname</h1>
+        <h2>LASTNAME</h2>
+        <small>web designer &#47; developer</small>
+      </div>
+      <div class="info">
+        <p>12345 Some Street, City<br />State, Province, Country</p>
+        <ul>
+          <li>+00 22 333444</li>
+          <li>email@somemail.example</li>
+          <li>www.exampledomain.example</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
