@@ -1,0 +1,161 @@
+body {
+  background-color: #345;
+}
+body,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+#chat {
+  width: 224px;
+  background-color: #556;
+  padding: 10px;
+  padding-top: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 3px black;
+  font-family: arial;
+  float: right;
+  margin-right: -242px;
+  animation: pop-up 1.5s 2s forwards;
+}
+@keyframes pop-up {
+  from {
+    margin-right: -242px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+#chat h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+#chat h2::before {
+  content: "";
+  background-image: url(avatar.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: -65px;
+  margin-right: 35px;
+
+  transform: translateY(20px);
+}
+#chat .messages {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px;
+  width: 200px;
+}
+#chat .messages li {
+  opacity: 0;
+  background-color: darkorange;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 15px 15px 15px 0;
+  color: white;
+}
+#chat .messages li:nth-child(1) {
+  animation: message-show 1s 4s forwards;
+}
+#chat .messages li:nth-child(2) {
+  animation: message-show 1s 5s forwards;
+}
+#chat .messages li:nth-child(3) {
+  animation: message-show 1s 6s forwards;
+}
+@keyframes message-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#chat textarea {
+  border-radius: 4px;
+  width: 202px;
+  padding: 10px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+#chat textarea:focus::placeholder {
+  color: transparent;
+}
+
+#chat label[for="chek"],
+#chat .messages,
+#chat .messages li,
+#chat textarea {
+  box-shadow: 0 0 3px black;
+}
+#chat h2,
+#chat .messages li,
+#chat label[for="chek"],
+#chat input:checked + label[for="chek"] {
+  text-shadow: 0.5px 0.5px black;
+}
+
+#chat .btn {
+  width: 144px;
+  float: right;
+}
+#chat label[for="chek"] {
+  display: inline-block;
+  padding: 10px 40px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 4px;
+  color: green;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#chat input {
+  opacity: 0;
+}
+#chat input:checked + label[for="chek"] {
+  background-color: darkorange;
+  color: white;
+}
+#chat label[for="chek"]::after {
+  position: absolute;
+  content: "●";
+  margin-left: 5px;
+  opacity: 0;
+  animation: point 1.5s steps(5) infinite;
+}
+
+@keyframes point {
+  from {
+    margin-left: 5px;
+    color: white;
+  }
+  to {
+    margin-left: 25px;
+    color: #555;
+  }
+}
+#chat input:checked + label[for="chek"]::after {
+  opacity: 1;
+}
+#chat label[for="chek"] span:nth-of-type(2) {
+  position: absolute;
+  transform: translateX(-72px);
+  font-size: 14px;
+  opacity: 0;
+}
+#chat input:checked + label[for="chek"] span:nth-of-type(1) {
+  opacity: 0;
+}
+#chat input:checked + label[for="chek"] span:nth-of-type(2) {
+  opacity: 1;
+}
