@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Box traffic Lights</title>
+    <style>
+      #light {
+        margin: 100px;
+        width: 100px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 5px;
+        opacity: 0;
+        animation: op 0.5s steps(1) forwards;
+        animation-delay: 5s;
+        position: absolute;
+      }
+      @keyframes op {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      #light .red {
+        background-color: red;
+        opacity: 0.2;
+        animation: red-light 1s steps(1) forwards;
+        animation-delay: 14.2s;
+      }
+
+      #light .yellow {
+        background-color: yellow;
+        opacity: 0.2;
+        animation: yellow-light 2.4s steps(1) forwards;
+        animation-delay: 12.8s;
+      }
+      #light .green {
+        background-color: green;
+        animation: green-light 1.2s steps(1) forwards;
+        animation-iteration-count: 4;
+        animation-delay: 8s;
+      }
+
+      #light .red,
+      #light .yellow {
+        margin-bottom: 20px;
+      }
+
+      #light .red,
+      #light .yellow,
+      #light .green {
+        width: 100px;
+        height: 100px;
+        border-top: 10px solid black;
+        border-radius: 50px;
+      }
+
+      @keyframes red-light {
+        from {
+          opacity: 0.2;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes yellow-light {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+      @keyframes green-light {
+        0% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 1;
+        }
+        60% {
+          opacity: 0.2;
+        }
+        80% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+
+      #light-2 {
+        margin: 100px;
+        width: 100px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 5px;
+        animation: op-2 0.5s steps(1) forwards;
+        animation-delay: 5s;
+
+        position: absolute;
+      }
+      @keyframes op-2 {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      #light-2 .red-2 {
+        background-color: red;
+        animation: red-light-2 1s steps(1) forwards;
+        animation-delay: 5s;
+      }
+
+      #light-2 .yellow-2 {
+        background-color: yellow;
+        opacity: 0.2;
+        animation: yellow-light-2 3s steps(1) forwards;
+        animation-delay: 3s;
+      }
+      #light-2 .green-2 {
+        background-color: green;
+        opacity: 0.2;
+        animation: green-light-2 1s steps(1) forwards;
+        animation-delay: 5s;
+      }
+
+      #light-2 .red-2,
+      #light-2 .yellow-2 {
+        margin-bottom: 20px;
+      }
+
+      #light-2 .red-2,
+      #light-2 .yellow-2,
+      #light-2 .green-2 {
+        width: 100px;
+        height: 100px;
+        border-top: 10px solid black;
+        border-radius: 50px;
+      }
+
+      @keyframes red-light-2 {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+
+      @keyframes yellow-light-2 {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+      @keyframes green-light-2 {
+        from {
+          opacity: 0.2;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="light">
+      <div class="red"></div>
+      <div class="yellow"></div>
+      <div class="green"></div>
+    </div>
+
+    <div id="light-2">
+      <div class="red-2"></div>
+      <div class="yellow-2"></div>
+      <div class="green-2"></div>
+    </div>
+  </body>
+</html>
