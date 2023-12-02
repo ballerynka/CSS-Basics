@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Box traffic Lights</title>
+    <style>
+      #light {
+        margin: 100px;
+        width: 100px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      #light .red {
+        background-color: red;
+        animation: red-light 1s steps(1) forwards;
+        animation-delay: 5s;
+      }
+
+      #light .yellow {
+        background-color: yellow;
+        opacity: 0.2;
+        animation: yellow-light 3s steps(1) forwards;
+        animation-delay: 3s;
+      }
+      #light .green {
+        background-color: green;
+        opacity: 0.2;
+        animation: green-light 1s steps(1) forwards;
+        animation-delay: 5s;
+      }
+
+      #light .red,
+      #light .yellow {
+        margin-bottom: 20px;
+      }
+
+      #light .red,
+      #light .yellow,
+      #light .green {
+        width: 100px;
+        height: 100px;
+        border-top: 10px solid black;
+        border-radius: 50px;
+      }
+
+      @keyframes red-light {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+
+      @keyframes yellow-light {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+      @keyframes green-light {
+        from {
+          opacity: 0.2;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="light">
+      <div class="red"></div>
+      <div class="yellow"></div>
+      <div class="green"></div>
+    </div>
+  </body>
+</html>
