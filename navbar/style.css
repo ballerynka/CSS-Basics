@@ -1,0 +1,46 @@
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Raleway", sans-serif;
+  background-color: #fbcdcb;
+  background-image: url(https://i0.wp.com/upbeetkitchen.com/wp-content/uploads/2019/03/vegan-chocolate-chip-pecan-cranberry-cookies-9.jpg?fit=683%2C1024&ssl=1);
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: auto;
+  text-align: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0.5px 0px 0.5px #fbcdcb;
+}
+
+.navbar {
+  background-color: #482921;
+  text-align: right;
+  box-shadow: inset 0 0 3px 3px #fbcdcb;
+}
+.navbar li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 30px 5px 0;
+}
+.navbar a:not(.logo)::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid transparent;
+  transform: translateX(100%);
+  margin-top: 5px;
+}
+.navbar a:hover::after {
+  border-bottom: 1px solid white;
+  transform: translateX(0);
+  transition: 0.2s;
+}
+
+.navbar img[alt="LOGO"] {
+  width: 128px;
+}
+
+.img {
+  width: 200px;
+}
