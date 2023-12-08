@@ -1,0 +1,60 @@
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+body {
+  width: 1679px;
+  background-color: #003333;
+}
+
+ul {
+  list-style: none;
+}
+#navbar {
+  background-color: #004d4d;
+  padding: 0 2.5%;
+}
+#navbar a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 36px 18px;
+}
+#navbar .image {
+  font-size: 72px;
+  padding: 10px 18px;
+}
+
+#navbar ul {
+  display: inline-block;
+}
+#navbar li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#navbar .nav-user {
+  transform: translateX(480px);
+}
+#navbar .nav-main {
+  transform: translateX(300px);
+}
+
+#navbar .phone {
+  font-weight: bold;
+}
+#navbar .fa-phone-volume {
+  margin-right: 10px;
+}
+#navbar .fa-address-card,
+#navbar .fa-briefcase {
+  font-size: 30px;
+}
+#navbar .user,
+#navbar .cart {
+  padding: 31px 18px;
+}
