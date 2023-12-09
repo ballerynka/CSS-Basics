@@ -1,0 +1,147 @@
+body,
+ol {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  width: 1680px;
+}
+ol {
+  list-style: none;
+}
+h1,
+h2 {
+  font-family: "Dosis", sans-serif;
+}
+h1 {
+  font-size: 50px;
+  font-weight: lighter;
+  color: #4d4d4d;
+}
+h2 {
+  font-size: 40px;
+  font-weight: lighter;
+  padding: 30px 0;
+  margin: 0;
+  color: white;
+  background-color: #401669e4;
+}
+
+.box-options {
+  text-align: center;
+  padding: 50px 0;
+  
+}
+.options__header {
+  width: 46%;
+  margin: auto;
+}
+.options__list {
+  width: 66%;
+  margin: auto;
+}
+.options__list > li {
+  display: inline-block;
+  width: 30.3%;
+  height: 490px;
+  box-shadow: 0 0 5px #c3c3c3;
+  vertical-align: top;
+  margin: 110px 14px;
+  padding: 55px 0;
+  border-radius: 0 0 8px 6px;
+  transition: 0.3s linear;
+}
+.options__list > li:nth-child(2) {
+  outline: 3px solid #e6004dcf;
+}
+.options__list > li:nth-child(2) h2 {
+  background-image: linear-gradient(to bottom, #ff668cc3, #401669e4);
+}
+.options__list > li:nth-child(2) .price {
+  color: #e6000fe9;
+}
+.options__list > li:nth-child(2) a {
+  background-image: linear-gradient(to right, #e62e00f1, #ff8000);
+  color: white;
+  outline: none;
+}
+.options__list > li:hover {
+  box-shadow: 0 0 5px #c3c3c3;
+  box-shadow: 0px 15px 35px -5px rgb(158, 155, 155);
+  transition: 0.3s linear;
+}
+/*.options__list > li:hover {
+  outline: 3px solid #e6004dcf;
+  box-shadow: 0px 15px 20px -10px rgb(212, 32, 32);
+  transition: 0.2s;
+}
+.options__list > li:hover h2 {
+  background-image: linear-gradient(to bottom, #ff668cc3, #401669e4);
+}
+.options__list > li:hover a {
+  background-image: linear-gradient(to right, #e62e00f1, #ff8000);
+  color: white;
+  outline: none;
+}
+.options__list > li:hover .price {
+  color: #e6000fe9;
+}*/
+.classic-box-button {
+  transform: translate(-35px, 130px);
+}
+.family-box-button {
+  transform: translate(-35px, 90px);
+}
+.veggie-box-button {
+  transform: translate(-35px, 10px);
+}
+
+p {
+  font-size: 18px;
+  color: #4d4d4d;
+}
+li > p {
+  padding: 10px;
+}
+.features > li {
+  display: block;
+  border-top: 1px solid #d9d9d9;
+  font-size: 15px;
+  padding: 12px;
+  color: #404040;
+}
+
+.price {
+  display: inline-block;
+  background-color: white;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  vertical-align: middle;
+  font-size: 25px;
+  font-weight: bolder;
+  box-shadow: 0 -12px 10px -10px #999;
+  color: #4d4d4d;
+}
+.low-price {
+  transform: translate(100px, -371px);
+}
+.medium-price {
+  transform: translate(100px, -413px);
+}
+.high-price {
+  transform: translate(100px, -498px);
+}
+a {
+  text-decoration: none;
+  padding: 16px 50px;
+  outline: 2px solid #e9e8e8;
+  border-radius: 50px;
+  display: inline-block;
+  color: #262626;
+  font-size: 15px;
+  font-weight: 400;
+}
