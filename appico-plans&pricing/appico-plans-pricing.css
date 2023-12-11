@@ -1,0 +1,100 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  margin-top: 200px;
+  width: 1680px;
+}
+
+.offers .container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+  color: #444;
+}
+.offers header {
+  display: inline-block;
+  padding-bottom: 45px;
+  width: 50%;
+  text-align: center;
+}
+
+.offers header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.offers header h2,
+p {
+  color: #777;
+}
+.offers .row h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+.offers .row h3 > span {
+  font-size: 28px;
+}
+
+.offers .row p {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 50px;
+  font-size: 13px;
+}
+.offers .row ol li {
+  display: inline-block;
+  width: 17%;
+  border: 1px solid #dedede;
+  margin: 0 10px;
+  font-family: "Roboto", sans-serif;
+  vertical-align: top;
+  text-align: left;
+}
+.offers .row ol > li {
+  border: 1px solid #dedede;
+  padding: 40px 25px 60px 25px;
+}
+.offers .row ol > li:nth-child(2),
+.offers .row ol > li:nth-child(2) p {
+  background-color: #005ce6;
+  color: white;
+}
+.offers .row ol > li:nth-child(2) a {
+  background-color: #fff;
+  color: #444;
+}
+.offers .row ul > li:first-child {
+  padding-top: 35px;
+  text-align: left;
+}
+.offers .row ul > li {
+  border: none;
+  margin: 0;
+  padding-top: 16px;
+  display: block;
+  width: 100%;
+}
+.offers .row ul > li::before {
+  content: url(https://icons.iconarchive.com/icons/famfamfam/silk/16/tick-icon.png);
+  color: greenyellow;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.offers .row ul > li:last-child {
+  padding-bottom: 55px;
+}
+.offers .row ol > li:first-child ul > li:last-child::before {
+  content: url(https://icons.iconarchive.com/icons/yusuke-kamiyamane/fugue/16/cross-icon.png);
+}
+
+.offers .row a {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 15px 24px;
+  background-color: #005ce6;
+  color: white;
+  border-radius: 50px;
+}
